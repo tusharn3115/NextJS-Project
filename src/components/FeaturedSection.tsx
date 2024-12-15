@@ -37,9 +37,16 @@ function FeaturedSection() {
             <div key={course.id} className="flex justify-center">
               <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
                 <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
-                  <p className="text-lg sm:text-lg text-black mt-4 mb-2 dark:text-neutral-400 flex-wrap">{course.title}</p>
+                  <p className="text-lg sm:text-lg text-black mt-4 mb-2 dark:text-neutral-400 flex-wrap">
+                    {course.title}
+                  </p>
                   <p>{course.description}</p>
-                  <Link href={`/courses/${course.slug}`}>Learn More</Link>
+                  <Link
+                    className=" mt-6 px-4 py-2 rounded text-white active:scale-90 bg-slate-600 hover:bg-slate-700 duration-150"
+                    href={`/courses/${course.slug}`}
+                  >
+                    Learn More
+                  </Link>
                 </div>
               </BackgroundGradient>
             </div>
